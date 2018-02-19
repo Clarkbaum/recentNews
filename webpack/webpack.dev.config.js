@@ -8,11 +8,17 @@ module.exports = {
     path.join(parentDir, 'index.js')
   ],
   module: {
-    loaders: [{
-      test: /\.(js|jsx)$/,
+    loaders: [
+      {
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
-      },{
+        loader: 'babel-loader',
+        query: {
+          presets: ["es2015", "stage-0", "react"],
+          plugins: ["transform-object-rest-spread"]
+        }
+      },
+      {
         test: /\.less$/,
         loaders: ["style-loader", "css-loder", "less-loader"]
       }
