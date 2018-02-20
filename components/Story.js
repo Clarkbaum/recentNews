@@ -8,9 +8,14 @@ class Story extends React.Component {
     }
   }
   render() {
+    console.log("this.props", this.props.story)
     return(
       <div>
-        Story test
+        <div>{this.props.story.title}</div>
+        <div>{this.props.story.author}</div>
+        <div>{this.props.story.url}</div>
+        <div>{this.props.story.publishedAt}</div>
+        <p />
       </div>
     )
   }
