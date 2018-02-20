@@ -1,0 +1,1 @@
+auth key for news api: 0743d3c85acf40bf9eaf125623ca3ed5
