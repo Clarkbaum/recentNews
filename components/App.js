@@ -1,5 +1,6 @@
 import React from 'react';
 import Story from './Story.js';
+import '../styles.less';
 
 class App extends React.Component{
 
@@ -50,7 +51,7 @@ class App extends React.Component{
   render (){
     return (
       <div>
-        <h1> Recent News </h1>
+        <h1 className='header'> Recent News </h1>
         {this.state.newsList.map(story =>
           <Story story={story}/>
         )}
