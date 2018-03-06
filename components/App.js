@@ -52,8 +52,8 @@ class App extends React.Component{
     return (
       <div>
         <h1 className='header'> Recent News </h1>
-        {this.state.newsList.map(story =>
-          <Story story={story}/>
+        {this.state.newsList.map((story, index) =>
+          <Story key={index} story={story}/>
         )}
       </div>
     )
